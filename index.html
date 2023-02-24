@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Emma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://kit.fontawesome.com/906446e159.js" crossorigin="anonymous"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+  <script src="https://rawgit.com/icebob/fakerator/master/dist/fakerator.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+      (function() {
+          // https://dashboard.emailjs.com/admin/account
+          emailjs.init('TBfFfd-BAaXKqrGPb');
+      })();
+  </script>
+  <script type="text/javascript">
+      window.onload = function() {
+          document.getElementById('contact-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+              // generate a five digit number for the contact_number variable
+              this.contact_number.value = Math.random() * 100000 | 0;
+              // these IDs from the previous steps
+              emailjs.sendForm("service_y6imvnf","template_uas9c4p", this)
+                  .then(function() {
+                      console.log('SUCCESS!');
+                  }, function(error) {
+                      console.log('FAILED...', error);
+                  });
+          });
+      }
+  </script>
+
+
+</head>
+
+<body>
+
+  <section id="title">
+
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <a id = "appname" class="navbar-brand" href="">TinDog</a>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Prix</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+
+      <!-- Title -->
+
+      <div id="premiere_partie" class="row">
+        <div class="col-lg-6">
+        <h1>Meet new and interesting dogs nearby.</h1>
+        <button type="button" class="btn btn-dark btn-lg download-button">
+          <i class="fa-brands fa-apple"></i>    Download</button>
+        <button type="button" class="btn btn-outline-light btn-lg download-button">
+          <i class="fab fa-google-play"></i>   Download</button>
+        </div>
+        <div class="col-lg-6 title-image">
+          <img src="images/iphone6.png" alt="iphone-mockup">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div  id="rowfeatures" class="row justify-content-center">
+      <div class="col-sm-4 text-center">
+        <div class="card border-0">
+          <div class="card-block" width="16">
+            <h2><i class="fas fa-check-circle fa-3x"></i></h2>
+        </div>
+          <div class="card-body">
+            <h6 class="card-title">Easy to use</h6>
+            <p class="card-text">So easy to use, even your dog could do it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="card border-0">
+          <div class="card-block">
+            <h2><i class="fas fa-bullseye fa-3x"></i></h2>
+        </div>
+          <div class="card-body">
+            <h6 class="card-title">Elite Clientele</h6>
+            <p class="card-text">We have all the dogs, the greatest dogs.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 text-center">
+        <div class="card border-0">
+          <div class="card-block">
+            <h2><i class="fas fa-heart fa-3x"></i></h2>
+        </div>
+          <div class="card-body">
+            <h6 class="card-title">Guaranteed to work</h6>
+            <p class="card-text">Find the love of your dog's life or your money back.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials1">
+    <h3><em>"I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof."</em></h3>
+  </section>
+   
+    <div id="blank" class="container"></div>
+  <section id="testimonials"> 
+    <div class="container">
+      <div id ="profiles1" class="row">
+        <div id="chien1" class="col">
+          <img id="harryold" src="images/harry.jpeg" alt="dog-profile" height="400px">
+        </div>
+        <div class="col">
+          <h4>Harry<br></h4><h5> West Island Terrier<br>10 years old <br> Paris</h5><br><br>
+          <button id="harry" class="button-45" role="button">Get info</button>
+        </div>
+        
+      </div>
+      <div id="blank2" class="container"></div>
+      <div id ="profiles2" class="row">
+        <div id="chien2" class="col">
+          <img id="cajouold" src="images/cajou.jpg" alt="dog-profile" height="400px">
+        </div>
+        <div class="col">
+          <h4>Cajou<br></h4><h5>Mix race<br>7 years old <br> Montpellier</h5><br><br>
+          <button id="cajou" class="button-45" role="button">Get info</button>
+        </div>
+      </div>
+      <div id="blank2" class="container"></div>
+      <div id ="profiles3" class="row">
+        <div id="chien3" class="col">
+          <img id="fleurold" src="images/fleur.jpg" alt="dog-profile" height="400px">
+
+        </div>
+        <div class="col">
+          <h4>Fleur<br></h4><h5>English Cocker Spaniel<br>1 year old <br>Bordeaux</h5><br><br>
+          <button id="fleur" class="button-45" role="button">Get info</button>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="testimonials3">
+      <div id="blank3" class="container"></div>
+
+    <h3>Contact us</h3>
+
+    <form id="contact-form">
+      <input type="hidden" name="contact_number">
+      <label>Name</label>
+      <input type="text" name="from_name">
+      <label>Email</label>
+      <input type="email" name="reply_to">
+      <label>Object</label>
+      <input type="text" name="object">
+      <label>Message</label>
+      <textarea name="message"></textarea>
+      <input type="submit" value="Send">
+  </form>
+  </section>
+
+  <button onclick="sendEmail()">timestamp</button>
+
+  <script type="text/javascript">
+    function getTimeStamp() {
+       var now = new Date();
+       return ((now.getDate() + 1) + '/' + (now.getMonth()) + '/' + now.getFullYear() + " " + now.getHours() + ':'
+                     + ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + ((now.getSeconds() < 10) ? ("0" + now
+                     .getSeconds()) : (now.getSeconds())));
+}
+    function sendEmail() {
+      let currentimestamp = getTimeStamp();
+      emailjs.init('TBfFfd-BAaXKqrGPb');
+      emailjs.send("service_y6imvnf","template_yesezdm",{
+        timestamp: currentimestamp,
+      });
+    }
+  </script>
+  <button onclick="noir()">Noir</button>
+
+  <button id="hideHarry">Hide Harry</button>
+  <button id="showHarry">Show Harry</button>
+  <button id="hideCajou">Hide Cajou</button>
+  <button id="showCajou">Show Cajou</button>
+  <button id="hideFleur">Hide Fleur</button>
+  <button id="showFleur">Show Fleur</button>
+
+  
+    <script type="text/javascript">
+  
+    const hideHarryBtn = document.getElementById('hideHarry');
+    const showHarryBtn = document.getElementById('showHarry');
+    const profiles1 = document.getElementById('profiles1');
+    
+    hideHarryBtn.addEventListener('click', () => {
+      profiles1.style.display = 'none';
+    });
+    showHarryBtn.addEventListener('click', () => {
+      profiles1.style.display = 'block';
+    });
+
+    const hideCajouBtn = document.getElementById('hideCajou');
+    const showCajouBtn = document.getElementById('showCajou');
+    const profiles2 = document.getElementById('profiles2');
+    
+    hideCajouBtn.addEventListener('click', () => {
+      profiles2.style.display = 'none';
+    });
+    showCajouBtn.addEventListener('click', () => {
+      profiles2.style.display = 'block';
+    });
+
+    const hideFleurBtn = document.getElementById('hideFleur');
+    const showFleurBtn = document.getElementById('showFleur');
+    const profiles3 = document.getElementById('profiles3');
+    
+    hideFleurBtn.addEventListener('click', () => {
+      profiles3.style.display = 'none';
+    });
+    showFleurBtn.addEventListener('click', () => {
+      profiles3.style.display = 'block';
+    });
+
+    
+    </script> 
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <p id="p">© Copyright 2018 TinDog</p>
+
+  </footer>
+
+  <script>
+
+    var toutou1 = document.getElementById("harry");
+    var toutou2 = document.getElementById("cajou");
+    var toutou3 = document.getElementById("fleur");
+
+    toutou1.addEventListener('click', getInfo);
+    toutou2.addEventListener('click', getInfo);
+    toutou3.addEventListener('click', getInfo);
+
+    function getInfo() {
+    var fakerator = Fakerator();
+    var firstname = fakerator.names.firstName();
+    var lastname = fakerator.names.lastName();
+    var email = fakerator.internet.email(firstname, lastname);
+    alert("Name of the owner : " + firstname +" "+ lastname + "\nMail : " + email);
+    }
+  
+    function noir() {
+    var body = document.getElementById("body")[0];
+    if (body.style.backgroundColor === "white") {
+      body.style.backgroundColor = "black";
+      body.style.color = "white";
+    } else {
+      body.style.backgroundColor = "white";
+      body.style.color = "black";
+    }
+  }
+
+  
+  </script>
+
+</body>
+
+
+
+</html>
